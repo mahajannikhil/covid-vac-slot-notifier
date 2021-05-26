@@ -20,7 +20,7 @@
     "start": "cross-env NODE_ENV=production node prodServer",
     "bump": "standard-version",
     "prebuild": "npm run build:clean",
-    "build:clean": "rimraf build",
+    "build:clean": "rimraf docs",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js --color -p --progress",
     "gh-pages": "gh-pages --dist docs",
     "release": "npm run bump && npm run build && git push --follow-tags origin master && npm run gh-pages",
