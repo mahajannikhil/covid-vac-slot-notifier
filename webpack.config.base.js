@@ -18,7 +18,7 @@ module.exports = options => ({
         loader: 'babel-loader'
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        test: /\.(eot|svg|ttf|woff|woff2|ogg)$/,
         loader: 'file-loader'
       }
     ].concat(options.module.rules)

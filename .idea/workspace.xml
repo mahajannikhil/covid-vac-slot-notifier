@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7633fe4a-ae85-4bc9-ae19-e92ca22ab1b3" name="Default Changelist" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main-9412a6068aafbeb65f2c.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main-9412a6068aafbeb65f2c.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main.9412a6068aafbeb65f2c.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main.9412a6068aafbeb65f2c.min.css.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prodServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/prodServer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.base.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.base.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +31,12 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="E:\New folder\covid-vac-slot-notifier\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="standardjs.codestyle.accepted" value="true" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.gh-pages">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -75,9 +69,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.gh-pages" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
-        <item itemvalue="npm.gh-pages" />
       </list>
     </recent_temporary>
   </component>
@@ -90,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622037167708</updated>
       <workItem from="1622037169243" duration="93000" />
-      <workItem from="1622038379990" duration="7557000" />
+      <workItem from="1622038379990" duration="10545000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1622038965391</created>
@@ -106,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622046514431</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initial commit">
+      <created>1622050141433</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1622050141433</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

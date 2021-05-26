@@ -7,12 +7,14 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import TextField from '@material-ui/core/TextField'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
-import { LinearProgress, MenuItem, Select } from '@material-ui/core'
+import { LinearProgress, List, ListItem, ListItemText, MenuItem, Select } from '@material-ui/core'
+import notificationSound from '../assets/notification.ogg';
 
 function Home () {
   const [dateInput, setDateInput] = React.useState(null)
   const [pincode, setPincode] = React.useState(null)
   const [doseNo, setDoseNo] = React.useState(null)
+  const [slots, setSlots] = React.useState(null)
   const [searchFreq, setSearchFreq] = React.useState(1)
   const [startedLooking, setStartedLooking] = React.useState(false)
   const doseMap = {
@@ -29,6 +31,7 @@ function Home () {
       .then(function (response) {
         console.log(response)
         const centers = get(response, 'data.centers', [])
+        const slots = [];
         centers.forEach(({ sessions, address }) => {
           sessions.forEach(({ available_capacity, ...rest }) => {
             if (available_capacity > 0 && rest[doseMap[doseNo]] > 0) {
@@ -37,13 +40,15 @@ function Home () {
                 available_capacity,
                 address
               )
-              const slotArea = `For dose ${doseNo} ${
-                rest[doseMap[doseNo]]
-              } Slot available at ${address}`
-              window.alert(slotArea)
+              const slotArea = `${rest[doseMap[doseNo]]} Slot available for dose_${doseNo} at:- ${address}`
+              slots.push(slotArea);
             }
           })
         })
+        const audio = new Audio(notificationSound);
+        audio.play().then(() => {
+          setSlots(slots);
+        });
       })
       .catch(function (error) {
         // handle error
@@ -149,10 +154,19 @@ function Home () {
             }}
             className={classes.submit}
           >
-            Start looking
+            {startedLooking ? 'looking...' : 'Start looking'}
           </Button>
           {startedLooking && <LinearProgress />}
         </form>
+        {slots ? slots.map((s) => {
+          return <List>
+            <ListItem>
+              <ListItemText>
+                {s}
+              </ListItemText>
+            </ListItem>
+          </List>
+        }) : null}
       </div>
     </Container>
   )
