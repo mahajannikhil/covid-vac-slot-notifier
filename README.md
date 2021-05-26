@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# react-kickstart
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> just another react + webpack boilerplate
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+[![Build Status](https://travis-ci.org/vesparny/react-kickstart.svg)](https://travis-ci.org/vesparny/react-kickstart)
+[![Dependency status](https://david-dm.org/vesparny/react-kickstart/status.svg)](https://david-dm.org/vesparny/react-kickstart "Dependency status")
+[![Dev dependency status](https://david-dm.org/vesparny/react-kickstart/dev-status.svg)](https://david-dm.org/vesparny/react-kickstart#info=devDependencies "Dev dependency status")
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+See a [working demo](http://vesparny.github.io/react-kickstart/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Features
+* webpack + vanilla hot-module-replacement
+* styling with [glamorous](https://github.com/paypal/glamorous)
+* prettier and standardjs
+* basic routing setup with react-router (you most likely need routing in your app)
+* unit tests ([jest](http://facebook.github.io/jest/) and [enzyme](http://airbnb.io/enzyme))
+* development and production build
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Clone this repository**
+```
+git clone https://github.com/vesparny/react-kickstart.git
+```
 
-### `npm run build`
+**Install**
+```
+npm install (or yarn install)
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Start the application in dev mode with hot-module-replacement**
+```
+npm run dev
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Run tests**
+```
+npm test
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Build for production**
+```
+npm run build
+```
 
-### `npm run eject`
+**Run production version**
+```
+npm run start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**RUN in production as a docker container**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Create docker image**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+docker build -t react-kickstart .
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**RUN using docker-compose.yml**
 
-## Learn More
+```bash
+docker-compose up -d
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Lint with standard**
+```
+npm run lint
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+PR and issues reporting are always welcome :)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
+See LICENSE file
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Changelog
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+See CHANGELOG.md file
