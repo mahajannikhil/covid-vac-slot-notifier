@@ -46,7 +46,7 @@ function Home () {
           })
         })
         const audio = new Audio(notificationSound);
-        audio.play().then(() => {
+        slots.length && audio.play().then(() => {
           setSlots(slots);
         });
       })
